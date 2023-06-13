@@ -1,0 +1,92 @@
+// Link de variables
+
+@import "../utilidades/variables";
+@import "../utilidades/mixins";
+@import "../utilidades/extends";
+
+.contenedor-informacion{
+    display: grid;
+    justify-items: center; 
+    align-items: center; 
+    grid-template-areas: "foto-informacion foto-informacion foto-informacion"
+                         "informacion informacion informacion"
+                         "tramite lugares material"
+                          "footer footer footer";
+
+                          @include mobile {
+                            display: grid;
+                            place-items: center;
+                            grid-template-areas: "foto-informacion"
+                                                 "informacion"
+                                                 "tramite"
+                                                 "lugares"
+                                                 "material"
+                                                 "footer";
+                          }
+
+                           /* Estilos para dispositivos tablets */
+                           @include tablet{
+                            display: grid;
+                            place-items: center;
+                            grid-template-areas: "foto-informacion foto-informacion foto-informacion"
+                                                 "informacion informacion informacion"
+                                                 "tramite lugares material"
+                                                 "footer footer footer";
+                           }
+                            
+                    
+                           /* Estilos para dispositivos tablets */
+                           @include desktop;
+
+    .contenedor-informacion-foto{
+        grid-area: foto-informacion;
+        margin-top: 50px;
+        max-width: 100%;
+        max-height: 100%; 
+        overflow: hidden;
+        @include fade-in;
+        @extend .sombra;
+    }
+
+
+    .contenedor-informacion-titulo{
+        grid-area: informacion;
+        h1 {
+            margin-top: 20px;
+            color: $color-h2;
+            text-align: center;
+            @extend .sombra-texto;
+        }
+    }
+
+    .contenedor-informacion-tramite{
+        grid-area: tramite;
+        img{
+            @include informacion;
+            @extend .animacion-seleccion;
+            @extend .sombra;
+        }
+        
+    }
+
+    .contenedor-informacion-lugares{
+        grid-area: lugares;
+        img{
+            @include informacion;
+            @extend .animacion-seleccion;
+            @extend .sombra;
+        }
+        
+    }
+
+    .contenedor-informacion-material{
+        grid-area: material;
+        img{
+            @include informacion;
+            @extend .animacion-seleccion;
+            @extend .sombra;
+        }
+        
+    }
+}
+    

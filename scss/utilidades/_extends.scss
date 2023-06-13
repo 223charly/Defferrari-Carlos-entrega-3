@@ -1,0 +1,43 @@
+//sombra
+
+.sombra {
+    box-shadow: 0 10px 10px 0px black;
+}
+
+.sombra-texto {
+    text-shadow: 2px 2px 5px grey;
+}
+
+.card-text-alineado{
+    display: flex;
+    justify-content: center;
+}
+
+//animaciones
+
+.animacion-seleccion {
+    transition: transform 0.3s ease; 
+  
+    &:hover {
+      transform: scale(1.1); 
+    }
+}
+
+//boton
+
+.mi-boton{
+    &:hover{
+    background-color: rgb(3, 66, 5); 
+    color: white; 
+    border-color: #000000;
+  }
+}
+
+
+  
+  
+  
+  
+  
+  
+  

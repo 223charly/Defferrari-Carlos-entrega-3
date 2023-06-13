@@ -1,0 +1,156 @@
+// Link de variables
+
+@import "../utilidades/variables";
+@import "../utilidades/mixins";
+@import "../utilidades/extends";
+
+
+ 
+.contenedor-contacto{
+    display: grid;
+    justify-items: center; 
+    align-items: center; 
+    grid-template-areas: "foto-contacto formulario"
+                          "footer footer";
+                       
+                          @include mobile {
+                            display: grid;
+                            place-items: center;
+                            grid-template-areas: "foto-contacto"
+                                                  "formulario"
+                                                  "footer";  
+                           }
+                    
+                           /* Estilos para dispositivos tablets */
+                           @include tablet{
+                            display: grid;
+                            place-items: center;
+                            grid-template-areas: "foto-contacto formulario"
+                                                  "footer footer"; 
+                           }
+    
+        .contenedor-contacto-dos{
+            grid-area: foto-contacto;
+            text-align: center;
+            margin-top: 100px;
+           
+        .foto-contacto{
+            @include fade-in;
+            margin: 10px;
+            @extend .sombra;
+
+        }
+      }
+
+    .contenedor-contacto-tres{
+      grid-area: formulario;
+      margin-top: 100px;
+      @include mobile{
+        margin-top: 15px;
+      }
+    }
+          
+      
+      .formulario{
+    
+      .formulario input:focus{
+        outline:0;
+        border: 1px solid #97d848;
+      }
+      
+      .formulario textarea:focus{
+        outline:0;
+        border: 1px solid #97d848;
+      }
+       
+      .nosotros {
+        color: whitesmoke;
+      }
+    
+      .nosotros1 {
+        color: whitesmoke;
+      }
+      
+    }
+
+    
+}
+
+/* formulario */
+  
+.contact_form{  
+    width: 460px; 
+    height: auto;
+    margin: 40px auto;
+    border-radius: 10px;  
+    padding-top: 5px;
+    padding-bottom: 5px;  
+    background-color: #fbfbfb; 
+    padding-left: 30px; 
+  }
+  
+  
+  input{
+    background-color: #fbfbfb; 
+    width: 500px; 
+    height: 40px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #000000; 
+    margin-top: 5px;  
+    padding-left: 10px;
+    margin-bottom: 5px; 
+  }
+  
+  textarea{
+    background-color: #fbfbfb; 
+    width: 500px; 
+    height: 150px; 
+    border-radius: 5px;  
+    border-style: solid; 
+    border-width: 1px; 
+    border-color: #000000;  
+    margin-top: 10px;  
+    padding-left: 10px;
+    margin-bottom: 20px; 
+    padding-top: 15px; 
+  }
+  
+  
+  label{
+    display: block; 
+    float: center;  
+  }
+  
+   
+  .aviso{
+    font-size: 13px;  
+    color: #0e0e0e;  
+  }
+  
+  .form1{
+    font-size: medium;
+    margin-bottom: 5px;
+    color: whitesmoke;
+    width: 500px;
+  }
+  .btn-contacto{
+    margin-top: 0px;
+    align-self: center;
+    @extend .mi-boton;
+  }
+  
+  h3{
+    font-size: 16px; 
+    padding-bottom: 30px;
+    color: #0e0e0e; 
+  }
+  
+  
+  .p formulario-contacto{
+    font-size: 14px; 
+    color: #0e0e0e; 
+  }
+
+

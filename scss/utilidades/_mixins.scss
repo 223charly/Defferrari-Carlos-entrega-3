@@ -1,0 +1,65 @@
+// card
+
+@mixin card-personalizado {
+    width: 18rem;
+    height: 18rem;
+    margin-top: 15px;
+  }
+
+@mixin card-text-personalizado {
+    text-align: center;
+    color: #7a7a7a;
+}
+
+@mixin card-clases-personalizado {
+    width: 28rem;
+    height: 18rem;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+@mixin fade-in($duration: 1s) {
+    opacity: 0;
+    animation: fade-in-animation $duration ease-in-out forwards;
+  
+    @keyframes fade-in-animation {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+
+  @mixin informacion {
+    width: 250px;
+    height: 250px;
+    border-radius: 15px;
+    border: 10px solid black;
+    margin: 10px;
+  }
+
+
+   // responsive mq
+
+   @mixin mobile {
+    @media (max-width: $breakpoint-medium) {
+      @content;
+    }
+  }
+  
+  @mixin tablet {
+    @media (min-width: $breakpoint-medium) and (max-width: $breakpoint-large) {
+      @content;
+    }
+  }
+  
+  @mixin desktop {
+    @media (min-width: $breakpoint-large) {
+      @content;
+    }
+  }
+

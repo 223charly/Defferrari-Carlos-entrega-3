@@ -1,0 +1,254 @@
+// Link de variables
+
+@import "../utilidades/variables";
+@import "../utilidades/mixins";
+@import "../utilidades/extends";
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #575757;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; 
+}
+
+.menu-propio {
+    background: linear-gradient($color-menu);
+    font-size: larger;
+    a:hover {
+        color: $color-menu-botones-hover
+    }
+    .nav-link{
+        color: $color-menu-botones;
+    }
+}
+
+h1{
+        color: $color-h1;
+        text-shadow: 2px 2px 5px grey;
+}
+
+
+.contenedor{
+    display: grid;
+    justify-items: center; 
+    align-items: center; 
+    grid-template-areas: "carrusel carrusel carrusel"
+                         "curso curso curso"
+                         "inicial intermedio avanzado"
+                         "servicios servicios servicios"
+                         "servicio-uno servicio-dos servicio-tres"
+                         "servicio-cuatro servicio-cinco servicio-seis"
+                         "footer footer footer";  
+                         
+                         @include mobile {
+                            display: grid;
+                            place-items: center;
+                            grid-template-areas: "carrusel carrusel"
+                                                  "curso curso"
+                                                  "inicial inicial" 
+                                                  "intermedio intermedio"
+                                                  "avanzado avanzado"
+                                                    "servicios servicios"
+                                                    "servicio-uno servicio-dos" 
+                                                    "servicio-tres servicio-cuatro"
+                                                    "servicio-cinco servicio-seis"
+                                                    "footer footer";  
+                           }
+                    
+                           /* Estilos para dispositivos tablets */
+                           @include tablet{
+                            display: grid;
+                            place-items: center;
+                            grid-template-areas: "carrusel carrusel"
+                                                  "curso curso"
+                                                  "inicial inicial" 
+                                                  "intermedio intermedio"
+                                                  "avanzado avanzado"
+                                                    "servicios servicios"
+                                                    "servicio-uno servicio-dos" 
+                                                    "servicio-tres servicio-cuatro"
+                                                    "servicio-cinco servicio-seis"
+                                                    "footer footer";  
+                           }
+                            
+                    
+                           /* Estilos para dispositivos tablets */
+                           @include desktop;
+
+                            
+                        
+    .contenedor-uno{
+        grid-area: carrusel;
+        margin-top: 75px;
+    }
+
+    .contenedor-dos{
+        grid-area: curso;
+        text-align: center;
+        color:whitesmoke;
+        margin-top: 20px;
+    }
+
+    .contenedor-tres{
+        grid-area: inicial;
+    }
+
+    .contenedor-cuatro {
+        grid-area: intermedio;
+    }
+
+    .contenedor-cinco{
+        grid-area: avanzado;
+    }
+    .card-img-top{
+        width: 100px;
+        margin: 0 auto 0 auto;
+    }
+    .card-margin{
+        margin: 25px;
+        background-color: whitesmoke;
+        text-align: center;
+        display: flex;
+    }
+    .card-title-mio{
+        background-color: $color-card-titulo;
+        @extend .animacion-seleccion;
+        @extend .sombra;
+    }
+    .card-img-mio{
+        height: 85px;
+    }
+    .card-text-mio{
+        text-align: center;
+        color: #d8e000;
+        @include tablet{
+            height: 50px;
+        }
+    }
+    .card-body-mio {
+        align-items: center;
+        height: 250px;
+        @include tablet{
+            height: 160px;
+        }
+    }
+
+    .card-footer-mio {
+        background-color: $color-card-clases;
+    }
+
+    .contenedor-seis{
+        grid-area: servicios;
+        text-align: center;
+        color: whitesmoke;
+        margin-top: 20px;
+    }
+
+    h2 {
+        color: $color-h2;
+        text-align: center;
+        @extend .sombra-texto;
+    }
+
+    .contenedor-siete{
+        grid-area: servicio-uno;
+    }
+
+    .contenedor-ocho{
+        grid-area: servicio-dos;
+    }
+
+    .contenedor-nueve{
+        grid-area: servicio-tres;
+    }
+    
+    .contenedor-diez{
+        grid-area: servicio-cuatro;
+        
+    }
+
+    .contenedor-once{
+        grid-area: servicio-cinco;
+       
+    }
+
+    .contenedor-doce{
+        grid-area: servicio-seis;
+       
+    }
+
+    .card-personalizado{
+        @include card-personalizado;
+        @extend .sombra;
+    }
+
+    .card-img-top{
+        margin-top: 10px;
+    }
+    
+
+    p {
+        @include card-text-personalizado;
+    }
+
+    h3{
+        text-align: center;
+        text-shadow: 2px 2px 5px rgb(193, 189, 189);
+    }
+    
+}
+
+
+/* Footer */
+
+footer {
+    margin-top: 25px;
+    git 
+  
+    a
+    {
+        img{
+            height: 25px;
+    } 
+  }
+}
+
+.btn-warning{
+    margin: 25px 5px 15px 15px;
+}
+
+.lista-icono{
+    list-style-image: url(../images/ubicacion.svg);
+
+}
+
+
+/* Boton flotante  WhatsApp */
+
+.btn-whatsapp {
+    display:block;
+    width:5px;
+    height:5px;
+    color:#fff;
+    position: fixed;
+    right: 100px;
+    bottom:100px;
+    border-radius:50%;
+    text-align:center;
+    z-index:15;
+  }
+
+  .iconows1{
+    width: 75px;
+    height: 75px;
+  }
+  
+
+
+

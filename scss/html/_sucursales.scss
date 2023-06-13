@@ -1,0 +1,89 @@
+// Link de variables
+
+@import "../utilidades/variables";
+@import "../utilidades/mixins";
+@import "../utilidades/extends";
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; 
+}
+
+.contenedor-sucursales{
+    display: grid;
+    margin-top: 100px;
+    grid-template-areas: "sucursales sucursales sucursales"
+                          "sucursal-nav sucursal-nav sucursal-nav"
+                          "footer footer footer";
+
+                          @include mobile {
+                            display: grid;
+                            place-items: center;
+                            grid-template-areas: "sucursales sucursales sucursales"
+                                                 "sucursal-nav sucursal-nav sucursal-nav"
+                                                 "footer footer footer";
+                          }
+                           /* Estilos para dispositivos tablets */
+                           @include tablet{
+                            display: grid;
+                            place-items: center;
+                            grid-template-areas: "sucursales sucursales sucursales"
+                                                 "sucursal-nav sucursal-nav sucursal-nav"
+                                                 "footer footer footer"; 
+                           }
+                            
+                    
+                           /* Estilos para dispositivos tablets */
+                           @include desktop;
+    h1{
+        text-align: center;
+    }
+
+    h3{
+        margin: 10px;
+        color: $color-h1;
+        font-size: larger;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 3px;
+    }
+    .contenedor-sucursales-uno{
+        grid-area: sucursales;
+    }
+
+    .contenedor-sucursales-dos{
+        grid-area: sucursal-nav;
+    }
+
+    ul{
+        margin: 5px;
+    }
+    .nav{
+        .nav-link.active{
+            background-color: $color-card-clases;
+            color: whitesmoke;
+        }
+    
+    }    
+    
+    .nav-item{
+        color: $color-h1;
+        background-color: #575757;
+        border-color: black;
+    }
+    
+    .nav-link {
+        
+        color: $color-h1;
+        border-color: rgb(255, 255, 255);
+      }
+
+    .btn-success{
+        margin: 15px;
+    }
+
+    }

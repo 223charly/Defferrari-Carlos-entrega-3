@@ -1,0 +1,567 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+.sombra, .contenedor .card-title-mio, .contenedor .card-personalizado, .contenedor-curso .card-clases-personalizado, .contenedor-contacto .contenedor-contacto-dos .foto-contacto, .contenedor-informacion .contenedor-informacion-foto, .contenedor-informacion .contenedor-informacion-tramite img, .contenedor-informacion .contenedor-informacion-lugares img, .contenedor-informacion .contenedor-informacion-material img {
+  box-shadow: 0 10px 10px 0px black; }
+
+.sombra-texto, .contenedor h2, .contenedor-curso .contenedor-curso-tres h2, .contenedor-informacion .contenedor-informacion-titulo h1 {
+  text-shadow: 2px 2px 5px grey; }
+
+.card-text-alineado {
+  display: flex;
+  justify-content: center; }
+
+.animacion-seleccion, .contenedor .card-title-mio, .contenedor-curso .card-clases-personalizado, .contenedor-informacion .contenedor-informacion-tramite img, .contenedor-informacion .contenedor-informacion-lugares img, .contenedor-informacion .contenedor-informacion-material img {
+  transition: transform 0.3s ease; }
+  .animacion-seleccion:hover, .contenedor .card-title-mio:hover, .contenedor-curso .card-clases-personalizado:hover, .contenedor-informacion .contenedor-informacion-tramite img:hover, .contenedor-informacion .contenedor-informacion-lugares img:hover, .contenedor-informacion .contenedor-informacion-material img:hover {
+    transform: scale(1.1); }
+
+.mi-boton:hover, .contenedor-curso .btn-primary:hover, .btn-contacto:hover {
+  background-color: #034205;
+  color: white;
+  border-color: #000000; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #575757; }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; }
+
+.menu-propio {
+  background: linear-gradient(to right, #4b4b4b 25%, #959595);
+  font-size: larger; }
+  .menu-propio a:hover {
+    color: #000000; }
+  .menu-propio .nav-link {
+    color: #ffd700; }
+
+h1 {
+  color: #ffd700;
+  text-shadow: 2px 2px 5px grey; }
+
+.contenedor {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas: "carrusel carrusel carrusel" "curso curso curso" "inicial intermedio avanzado" "servicios servicios servicios" "servicio-uno servicio-dos servicio-tres" "servicio-cuatro servicio-cinco servicio-seis" "footer footer footer";
+  /* Estilos para dispositivos tablets */
+  /* Estilos para dispositivos tablets */ }
+  @media (max-width: 768px) {
+    .contenedor {
+      display: grid;
+      place-items: center;
+      grid-template-areas: "carrusel carrusel" "curso curso" "inicial inicial"  "intermedio intermedio" "avanzado avanzado" "servicios servicios" "servicio-uno servicio-dos"  "servicio-tres servicio-cuatro" "servicio-cinco servicio-seis" "footer footer"; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .contenedor {
+      display: grid;
+      place-items: center;
+      grid-template-areas: "carrusel carrusel" "curso curso" "inicial inicial"  "intermedio intermedio" "avanzado avanzado" "servicios servicios" "servicio-uno servicio-dos"  "servicio-tres servicio-cuatro" "servicio-cinco servicio-seis" "footer footer"; } }
+  .contenedor .contenedor-uno {
+    grid-area: carrusel;
+    margin-top: 75px; }
+  .contenedor .contenedor-dos {
+    grid-area: curso;
+    text-align: center;
+    color: whitesmoke;
+    margin-top: 20px; }
+  .contenedor .contenedor-tres {
+    grid-area: inicial; }
+  .contenedor .contenedor-cuatro {
+    grid-area: intermedio; }
+  .contenedor .contenedor-cinco {
+    grid-area: avanzado; }
+  .contenedor .card-img-top {
+    width: 100px;
+    margin: 0 auto 0 auto; }
+  .contenedor .card-margin {
+    margin: 25px;
+    background-color: whitesmoke;
+    text-align: center;
+    display: flex; }
+  .contenedor .card-title-mio {
+    background-color: #838383; }
+  .contenedor .card-img-mio {
+    height: 85px; }
+  .contenedor .card-text-mio {
+    text-align: center;
+    color: #d8e000; }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .contenedor .card-text-mio {
+        height: 50px; } }
+  .contenedor .card-body-mio {
+    align-items: center;
+    height: 250px; }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .contenedor .card-body-mio {
+        height: 160px; } }
+  .contenedor .card-footer-mio {
+    background-color: #2c2c2c; }
+  .contenedor .contenedor-seis {
+    grid-area: servicios;
+    text-align: center;
+    color: whitesmoke;
+    margin-top: 20px; }
+  .contenedor h2 {
+    color: #ffd700;
+    text-align: center; }
+  .contenedor .contenedor-siete {
+    grid-area: servicio-uno; }
+  .contenedor .contenedor-ocho {
+    grid-area: servicio-dos; }
+  .contenedor .contenedor-nueve {
+    grid-area: servicio-tres; }
+  .contenedor .contenedor-diez {
+    grid-area: servicio-cuatro; }
+  .contenedor .contenedor-once {
+    grid-area: servicio-cinco; }
+  .contenedor .contenedor-doce {
+    grid-area: servicio-seis; }
+  .contenedor .card-personalizado {
+    width: 18rem;
+    height: 18rem;
+    margin-top: 15px; }
+  .contenedor .card-img-top {
+    margin-top: 10px; }
+  .contenedor p {
+    text-align: center;
+    color: #7a7a7a; }
+  .contenedor h3 {
+    text-align: center;
+    text-shadow: 2px 2px 5px #c1bdbd; }
+
+/* Footer */
+footer {
+  margin-top: 25px; }
+  footer git a img {
+    height: 25px; }
+
+.btn-warning {
+  margin: 25px 5px 15px 15px; }
+
+.lista-icono {
+  list-style-image: url(../images/ubicacion.svg); }
+
+/* Boton flotante  WhatsApp */
+.btn-whatsapp {
+  display: block;
+  width: 5px;
+  height: 5px;
+  color: #fff;
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+  border-radius: 50%;
+  text-align: center;
+  z-index: 15; }
+
+.iconows1 {
+  width: 75px;
+  height: 75px; }
+
+.sombra, .contenedor .card-title-mio, .contenedor .card-personalizado, .contenedor-curso .card-clases-personalizado, .contenedor-contacto .contenedor-contacto-dos .foto-contacto, .contenedor-informacion .contenedor-informacion-foto, .contenedor-informacion .contenedor-informacion-tramite img, .contenedor-informacion .contenedor-informacion-lugares img, .contenedor-informacion .contenedor-informacion-material img {
+  box-shadow: 0 10px 10px 0px black; }
+
+.sombra-texto, .contenedor h2, .contenedor-curso .contenedor-curso-tres h2, .contenedor-informacion .contenedor-informacion-titulo h1 {
+  text-shadow: 2px 2px 5px grey; }
+
+.card-text-alineado {
+  display: flex;
+  justify-content: center; }
+
+.animacion-seleccion, .contenedor .card-title-mio, .contenedor-curso .card-clases-personalizado, .contenedor-informacion .contenedor-informacion-tramite img, .contenedor-informacion .contenedor-informacion-lugares img, .contenedor-informacion .contenedor-informacion-material img {
+  transition: transform 0.3s ease; }
+  .animacion-seleccion:hover, .contenedor .card-title-mio:hover, .contenedor-curso .card-clases-personalizado:hover, .contenedor-informacion .contenedor-informacion-tramite img:hover, .contenedor-informacion .contenedor-informacion-lugares img:hover, .contenedor-informacion .contenedor-informacion-material img:hover {
+    transform: scale(1.1); }
+
+.mi-boton:hover, .contenedor-curso .btn-primary:hover, .btn-contacto:hover {
+  background-color: #034205;
+  color: white;
+  border-color: #000000; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #575757; }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; }
+
+.menu-propio {
+  background: linear-gradient(to right, #4b4b4b 25%, #959595);
+  font-size: larger; }
+  .menu-propio a:hover {
+    color: #000000; }
+  .menu-propio .nav-link {
+    color: #ffd700; }
+
+.contenedor-curso {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas: "foto-mobi ofrecer ofrecer" "clases clases clases" "clase-uno clase-dos clase-tres" "footer footer footer";
+  /* Estilos para dispositivos tablets */
+  /* Estilos para dispositivos tablets */ }
+  @media (max-width: 768px) {
+    .contenedor-curso {
+      display: grid;
+      place-items: center;
+      grid-template-areas: "foto-mobi" "ofrecer" "clases" "clase-uno" "clase-dos" "clase-tres" "footer"; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .contenedor-curso {
+      display: grid;
+      place-items: center;
+      grid-template-areas: "foto-mobi ofrecer ofrecer" "clases clases clases" "clase-uno clase-dos clase-tres" "footer footer footer"; } }
+  .contenedor-curso .contenedor-curso-uno {
+    grid-area: foto-mobi;
+    margin-top: 100px; }
+  .contenedor-curso .auto-uno {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center; }
+  .contenedor-curso .auto {
+    filter: drop-shadow(0 0 20px black);
+    max-width: 90%; }
+  .contenedor-curso .contenedor-curso-dos {
+    grid-area: ofrecer;
+    margin-top: 100px;
+    text-align: center;
+    margin-right: 25px; }
+    @media (max-width: 768px) {
+      .contenedor-curso .contenedor-curso-dos {
+        margin: 0px; } }
+    .contenedor-curso .contenedor-curso-dos .accordion .accordion-item {
+      background-color: #838383; }
+    .contenedor-curso .contenedor-curso-dos .accordion .accordion-button {
+      background-color: #838383;
+      color: white; }
+    .contenedor-curso .contenedor-curso-dos .accordion .accordion-button:not(.collapsed) {
+      background-color: #2c2c2c; }
+    .contenedor-curso .contenedor-curso-dos .accordion .accordion-item.show .accordion-collapse {
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); }
+  .contenedor-curso .contenedor-curso-tres {
+    grid-area: clases; }
+    .contenedor-curso .contenedor-curso-tres h2 {
+      color: #ffd700;
+      text-align: center;
+      margin: 10px; }
+    .contenedor-curso .contenedor-curso-tres p {
+      text-align: center;
+      color: black; }
+  .contenedor-curso .contenedor-curso-cuatro {
+    grid-area: clase-uno; }
+  .contenedor-curso .contenedor-curso-cinco {
+    grid-area: clase-dos; }
+  .contenedor-curso .contenedor-curso-seis {
+    grid-area: clase-tres; }
+    .contenedor-curso .contenedor-curso-seis h5 {
+      text-align: center; }
+  .contenedor-curso .card-clases-personalizado {
+    width: 28rem;
+    height: 18rem;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    text-align: center; }
+    @media (min-width: 768px) and (max-width: 992px) {
+      .contenedor-curso .card-clases-personalizado {
+        margin: 3px; } }
+  .contenedor-curso .btn-primary {
+    background-color: #ffd700;
+    border-color: black;
+    color: black; }
+
+.sombra, .contenedor .card-title-mio, .contenedor .card-personalizado, .contenedor-curso .card-clases-personalizado, .contenedor-contacto .contenedor-contacto-dos .foto-contacto, .contenedor-informacion .contenedor-informacion-foto, .contenedor-informacion .contenedor-informacion-tramite img, .contenedor-informacion .contenedor-informacion-lugares img, .contenedor-informacion .contenedor-informacion-material img {
+  box-shadow: 0 10px 10px 0px black; }
+
+.sombra-texto, .contenedor h2, .contenedor-curso .contenedor-curso-tres h2, .contenedor-informacion .contenedor-informacion-titulo h1 {
+  text-shadow: 2px 2px 5px grey; }
+
+.card-text-alineado {
+  display: flex;
+  justify-content: center; }
+
+.animacion-seleccion, .contenedor .card-title-mio, .contenedor-curso .card-clases-personalizado, .contenedor-informacion .contenedor-informacion-tramite img, .contenedor-informacion .contenedor-informacion-lugares img, .contenedor-informacion .contenedor-informacion-material img {
+  transition: transform 0.3s ease; }
+  .animacion-seleccion:hover, .contenedor .card-title-mio:hover, .contenedor-curso .card-clases-personalizado:hover, .contenedor-informacion .contenedor-informacion-tramite img:hover, .contenedor-informacion .contenedor-informacion-lugares img:hover, .contenedor-informacion .contenedor-informacion-material img:hover {
+    transform: scale(1.1); }
+
+.mi-boton:hover, .contenedor-curso .btn-primary:hover, .btn-contacto:hover {
+  background-color: #034205;
+  color: white;
+  border-color: #000000; }
+
+.contenedor-contacto {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas: "foto-contacto formulario" "footer footer";
+  /* Estilos para dispositivos tablets */ }
+  @media (max-width: 768px) {
+    .contenedor-contacto {
+      display: grid;
+      place-items: center;
+      grid-template-areas: "foto-contacto" "formulario" "footer"; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .contenedor-contacto {
+      display: grid;
+      place-items: center;
+      grid-template-areas: "foto-contacto formulario" "footer footer"; } }
+  .contenedor-contacto .contenedor-contacto-dos {
+    grid-area: foto-contacto;
+    text-align: center;
+    margin-top: 100px; }
+    .contenedor-contacto .contenedor-contacto-dos .foto-contacto {
+      opacity: 0;
+      animation: fade-in-animation 1s ease-in-out forwards;
+      margin: 10px; }
+
+@keyframes fade-in-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  .contenedor-contacto .contenedor-contacto-tres {
+    grid-area: formulario;
+    margin-top: 100px; }
+    @media (max-width: 768px) {
+      .contenedor-contacto .contenedor-contacto-tres {
+        margin-top: 15px; } }
+  .contenedor-contacto .formulario .formulario input:focus {
+    outline: 0;
+    border: 1px solid #97d848; }
+  .contenedor-contacto .formulario .formulario textarea:focus {
+    outline: 0;
+    border: 1px solid #97d848; }
+  .contenedor-contacto .formulario .nosotros {
+    color: whitesmoke; }
+  .contenedor-contacto .formulario .nosotros1 {
+    color: whitesmoke; }
+
+/* formulario */
+.contact_form {
+  width: 460px;
+  height: auto;
+  margin: 40px auto;
+  border-radius: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: #fbfbfb;
+  padding-left: 30px; }
+
+input {
+  background-color: #fbfbfb;
+  width: 500px;
+  height: 40px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000000;
+  margin-top: 5px;
+  padding-left: 10px;
+  margin-bottom: 5px; }
+
+textarea {
+  background-color: #fbfbfb;
+  width: 500px;
+  height: 150px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #000000;
+  margin-top: 10px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  padding-top: 15px; }
+
+label {
+  display: block;
+  float: center; }
+
+.aviso {
+  font-size: 13px;
+  color: #0e0e0e; }
+
+.form1 {
+  font-size: medium;
+  margin-bottom: 5px;
+  color: whitesmoke;
+  width: 500px; }
+
+.btn-contacto {
+  margin-top: 0px;
+  align-self: center; }
+
+h3 {
+  font-size: 16px;
+  padding-bottom: 30px;
+  color: #0e0e0e; }
+
+.p formulario-contacto {
+  font-size: 14px;
+  color: #0e0e0e; }
+
+.sombra, .contenedor .card-title-mio, .contenedor .card-personalizado, .contenedor-curso .card-clases-personalizado, .contenedor-contacto .contenedor-contacto-dos .foto-contacto, .contenedor-informacion .contenedor-informacion-foto, .contenedor-informacion .contenedor-informacion-tramite img, .contenedor-informacion .contenedor-informacion-lugares img, .contenedor-informacion .contenedor-informacion-material img {
+  box-shadow: 0 10px 10px 0px black; }
+
+.sombra-texto, .contenedor h2, .contenedor-curso .contenedor-curso-tres h2, .contenedor-informacion .contenedor-informacion-titulo h1 {
+  text-shadow: 2px 2px 5px grey; }
+
+.card-text-alineado {
+  display: flex;
+  justify-content: center; }
+
+.animacion-seleccion, .contenedor .card-title-mio, .contenedor-curso .card-clases-personalizado, .contenedor-informacion .contenedor-informacion-tramite img, .contenedor-informacion .contenedor-informacion-lugares img, .contenedor-informacion .contenedor-informacion-material img {
+  transition: transform 0.3s ease; }
+  .animacion-seleccion:hover, .contenedor .card-title-mio:hover, .contenedor-curso .card-clases-personalizado:hover, .contenedor-informacion .contenedor-informacion-tramite img:hover, .contenedor-informacion .contenedor-informacion-lugares img:hover, .contenedor-informacion .contenedor-informacion-material img:hover {
+    transform: scale(1.1); }
+
+.mi-boton:hover, .contenedor-curso .btn-primary:hover, .btn-contacto:hover {
+  background-color: #034205;
+  color: white;
+  border-color: #000000; }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; }
+
+.contenedor-sucursales {
+  display: grid;
+  margin-top: 100px;
+  grid-template-areas: "sucursales sucursales sucursales" "sucursal-nav sucursal-nav sucursal-nav" "footer footer footer";
+  /* Estilos para dispositivos tablets */
+  /* Estilos para dispositivos tablets */ }
+  @media (max-width: 768px) {
+    .contenedor-sucursales {
+      display: grid;
+      place-items: center;
+      grid-template-areas: "sucursales sucursales sucursales" "sucursal-nav sucursal-nav sucursal-nav" "footer footer footer"; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .contenedor-sucursales {
+      display: grid;
+      place-items: center;
+      grid-template-areas: "sucursales sucursales sucursales" "sucursal-nav sucursal-nav sucursal-nav" "footer footer footer"; } }
+  .contenedor-sucursales h1 {
+    text-align: center; }
+  .contenedor-sucursales h3 {
+    margin: 10px;
+    color: #ffd700;
+    font-size: larger;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 3px; }
+  .contenedor-sucursales .contenedor-sucursales-uno {
+    grid-area: sucursales; }
+  .contenedor-sucursales .contenedor-sucursales-dos {
+    grid-area: sucursal-nav; }
+  .contenedor-sucursales ul {
+    margin: 5px; }
+  .contenedor-sucursales .nav .nav-link.active {
+    background-color: #2c2c2c;
+    color: whitesmoke; }
+  .contenedor-sucursales .nav-item {
+    color: #ffd700;
+    background-color: #575757;
+    border-color: black; }
+  .contenedor-sucursales .nav-link {
+    color: #ffd700;
+    border-color: white; }
+  .contenedor-sucursales .btn-success {
+    margin: 15px; }
+
+.sombra, .contenedor .card-title-mio, .contenedor .card-personalizado, .contenedor-curso .card-clases-personalizado, .contenedor-contacto .contenedor-contacto-dos .foto-contacto, .contenedor-informacion .contenedor-informacion-foto, .contenedor-informacion .contenedor-informacion-tramite img, .contenedor-informacion .contenedor-informacion-lugares img, .contenedor-informacion .contenedor-informacion-material img {
+  box-shadow: 0 10px 10px 0px black; }
+
+.sombra-texto, .contenedor h2, .contenedor-curso .contenedor-curso-tres h2, .contenedor-informacion .contenedor-informacion-titulo h1 {
+  text-shadow: 2px 2px 5px grey; }
+
+.card-text-alineado {
+  display: flex;
+  justify-content: center; }
+
+.animacion-seleccion, .contenedor .card-title-mio, .contenedor-curso .card-clases-personalizado, .contenedor-informacion .contenedor-informacion-tramite img, .contenedor-informacion .contenedor-informacion-lugares img, .contenedor-informacion .contenedor-informacion-material img {
+  transition: transform 0.3s ease; }
+  .animacion-seleccion:hover, .contenedor .card-title-mio:hover, .contenedor-curso .card-clases-personalizado:hover, .contenedor-informacion .contenedor-informacion-tramite img:hover, .contenedor-informacion .contenedor-informacion-lugares img:hover, .contenedor-informacion .contenedor-informacion-material img:hover {
+    transform: scale(1.1); }
+
+.mi-boton:hover, .contenedor-curso .btn-primary:hover, .btn-contacto:hover {
+  background-color: #034205;
+  color: white;
+  border-color: #000000; }
+
+.contenedor-informacion {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas: "foto-informacion foto-informacion foto-informacion" "informacion informacion informacion" "tramite lugares material" "footer footer footer";
+  /* Estilos para dispositivos tablets */
+  /* Estilos para dispositivos tablets */ }
+  @media (max-width: 768px) {
+    .contenedor-informacion {
+      display: grid;
+      place-items: center;
+      grid-template-areas: "foto-informacion" "informacion" "tramite" "lugares" "material" "footer"; } }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .contenedor-informacion {
+      display: grid;
+      place-items: center;
+      grid-template-areas: "foto-informacion foto-informacion foto-informacion" "informacion informacion informacion" "tramite lugares material" "footer footer footer"; } }
+  .contenedor-informacion .contenedor-informacion-foto {
+    grid-area: foto-informacion;
+    margin-top: 50px;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    opacity: 0;
+    animation: fade-in-animation 1s ease-in-out forwards; }
+
+@keyframes fade-in-animation {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  .contenedor-informacion .contenedor-informacion-titulo {
+    grid-area: informacion; }
+    .contenedor-informacion .contenedor-informacion-titulo h1 {
+      margin-top: 20px;
+      color: #ffd700;
+      text-align: center; }
+  .contenedor-informacion .contenedor-informacion-tramite {
+    grid-area: tramite; }
+    .contenedor-informacion .contenedor-informacion-tramite img {
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      border: 10px solid black;
+      margin: 10px; }
+  .contenedor-informacion .contenedor-informacion-lugares {
+    grid-area: lugares; }
+    .contenedor-informacion .contenedor-informacion-lugares img {
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      border: 10px solid black;
+      margin: 10px; }
+  .contenedor-informacion .contenedor-informacion-material {
+    grid-area: material; }
+    .contenedor-informacion .contenedor-informacion-material img {
+      width: 250px;
+      height: 250px;
+      border-radius: 15px;
+      border: 10px solid black;
+      margin: 10px; }
